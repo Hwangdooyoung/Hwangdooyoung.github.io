@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>2022--05-24 인풋</title>
+	<style>
+
+		#box{
+			border: 2px black solid;
+			width: 30%;
+		}
+		#box2{
+			border:2px red solid;
+			text-align: center;
+		}
+		#box3{
+			border: 0px red solid;
+			text-align: center;
+		}
+
+		.background_pcu{
+			width: 30%;
+			height: 30%;
+			border: 2px black solid;
+
+			position: relative;
+		}
+		.background_pcu::before{
+			content: "";
+			background: url("img_pcu.png");
+			background-size: 100% 100%;
+			opacity: 0.5;
+
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			right: 0px;
+			bottom: 0px;
+		}
+
+		.background_pcu p{
+			color: black;
+			position: relative;
+			font-weight: bold;
+		}
+
+		.padding p{
+			padding-bottom:5px; 
+			padding-left:5px;
+		}
+
+		/*
+		#pd{
+			background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5), )
+			padding-bottom:10px; 
+			padding-left:10px;
+		}
+		*/
+
+	</style> 
+</head>
+
+<body>
+	<form>
+		<fieldset id="box" class="background_pcu">
+				<legend id="box2">개인 정보 입력</legend>
+				<p>이름 : <input type="text"></p>
+				<p>학과 : <input type="text"></p>
+				<input type="submit" value="전송">
+				<input type="reset" name="리셋">
+		</fieldset>
+	</form>
+	<p></p>
+	<form>
+			<fieldset id="box" class="background_pcu">
+					<legend id="box3">개인 정보 입력</legend>
+					<p>이름 : <input type="text"></p>
+					<p>학과 : <input type="text"></p>
+					<input type="submit" value="전송">
+					<input type="reset" name="리셋">
+			</fieldset>
+	</form>
+
+
+	<h2>입력 양식 데이터 전송 버튼</h2>
+	<form class="padding">
+
+		<div id="box" class="background_pcu">
+			<p>이름 : <input type="text"></p>
+			<p>학과 : <input type="text"></p>
+			<p>생일입력 : <input type="date"></p>
+			<p>퍼스널 컬러 : <input type="color"></p>
+			<p>이메일 : <input type="email" name="subject"></p>
+			<p>사람인가요? <input type="checkbox" name="subject"></p>
+			<p><input type="radio" name="subject">1학년</p>
+			<p><input type="radio" name="subject">2학년</p>
+			<p><input type="radio" name="subject">3학년</p>
+		</div>
+
+		<br>
+
+		<div id="box" class="background_pcu">
+			<p><b>이미지 업로드 : <b></p>
+			<p><input id="pd" type="file" value="파일 선택"></p>
+		</div>
+
+		<input type="submit" value="전송"> <input type="reset" name="리셋">
+
+	</form>
+
+</body>
+</html>
